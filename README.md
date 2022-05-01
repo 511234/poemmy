@@ -6,9 +6,14 @@ Try emojisense
 Try Emoji Log  
 Try git submodule  
 
+### Git Submodule
+
 package.json:  
     `"prettier": "./prettylulu",`  
     or  
     `"prettier": "./prettylulu/.prettierrc.json",`  
-    both ok  
+    both ok
 
+
+Detect and update app submodule if submodule has changed:
+`git submodule update --remote`
