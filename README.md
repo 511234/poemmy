@@ -5,6 +5,7 @@ Try rxjs
 Try emojisense  
 Try Emoji Log  
 Try git submodule  
+Try sass
 
 ### Git Submodule
 
@@ -15,5 +16,5 @@ package.json:
     both ok
 
 
-Detect and update app submodule if submodule has changed:
-`git submodule update --remote`
+Detect and update app submodule if submodule has changed:  
+`git submodule update --remote`  
