@@ -6,17 +6,27 @@ $royalPurple: #7E52A0
 $orchidCrayola: #D295BF
 $cameoPink: #E6BCCD
 
+$breakpoint-mobile: 576px
+$breakpoint-tablet: 768px
+
 .poem-container
     align-items: center
     background-color: $royalPurple
     border-radius: 2rem
     display: flex
     flex-direction: column
-    height: 80vh
+    height: 70%
+    justify-content: center
     margin: 1rem
     overflow: scroll
+    padding: 2rem
     row-gap: 2rem
     width: 80%
+
+@media (min-width: $breakpoint-mobile)
+    .poem-container
+        width: 50%
+
 
 .poem-container .poem-information .poem-author
     color: $spaceCadet
