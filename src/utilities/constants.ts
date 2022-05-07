@@ -1,0 +1,1 @@
+export const POEM_ENDPOINT = "https://poetrydb.org/random"
