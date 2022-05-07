@@ -19,7 +19,7 @@ export const Poem = () => {
 
     useEffect(() => {
         const getPoem$ = fromFetch(POEM_ENDPOINT).pipe(
-            switchMap((response) => {
+            switchMap((response: Response) => {
                 if (response.ok) {
                     return response.json()
                 } else {
@@ -39,7 +39,7 @@ export const Poem = () => {
 
         const refreshPoem = fromEvent(buttonRef.current, "click")
             .pipe(switchMap(() => getPoem$))
-            .subscribe((res: any) => res.then(setPoem(res?.[0])))
+            .subscribe((res) => res.then(setPoem(res?.[0])))
 
         return () => refreshPoem.unsubscribe()
     }, [])
