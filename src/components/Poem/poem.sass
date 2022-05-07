@@ -7,11 +7,30 @@ $orchidCrayola: #D295BF
 $cameoPink: #E6BCCD
 
 .poem-container
+    align-items: center
     background-color: $royalPurple
     border-radius: 2rem
     display: flex
     flex-direction: column
     height: 80vh
-    line-height: 3rem
+    margin: 1rem
     overflow: scroll
-    width: 50%
+    row-gap: 2rem
+    width: 80%
+
+.poem-container .poem-information .poem-author
+    color: $spaceCadet
+
+.poem-container .poem-line
+    line-height: 3rem
+
+.poem-regenerate-button
+    background-color: $cameoPink
+    border: 2px solid transparent
+    border-radius: 1rem
+    cursor: pointer
+    font-size: 1.5rem
+    padding: 1rem
+
+.poem-regenerate-button:hover
+    background-color: #FFF
