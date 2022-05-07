@@ -24,12 +24,10 @@ export const Poem = () => {
                 if (response.ok) {
                     return response.json()
                 } else {
-                    // Server is returning a status requiring the client to try something else.
                     return of({ error: true, message: `Error ${response.status}` })
                 }
             }),
             catchError((err) => {
-                // Network or other error, handle appropriately
                 console.error(err)
                 return of({ error: true, message: err.message })
             })
@@ -52,19 +50,7 @@ export const Poem = () => {
             .subscribe((res: any) => res.then(setPoem(res?.[0])))
 
         return () => refreshPoem.unsubscribe()
-
-        // const getPoem = fromFetch(POEM_ENDPOINT).pipe(switchMap((response: any) => response.json()))
-
-        // const observer = fromEvent(buttonRef.current, "click")
-        //     .pipe(switchMap(getPoem))
-        //     .subscribe((value) => console.log(value))
-        // observer.unsubscribe()
     }, [])
-
-    // const getPoem = async () => {
-    //     const response = await axios.get(POEM_ENDPOINT)
-    //     setPoem(response.data?.[0])
-    // }
 
     return (
         <>
