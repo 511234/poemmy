@@ -4,6 +4,7 @@ import { fromFetch } from "rxjs/fetch"
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import "./App.css"
 import axios from "axios"
+import { Poem } from "./components/Poem/Poem"
 
 const POEM_ENDPOINT = "https://poetrydb.org/random"
 const poemInitialState = {
@@ -46,6 +47,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <Poem />
                 <div>Title: {title} </div>
                 <div>Author: {author} </div>
                 <div>Linecount: {linecount} </div>
